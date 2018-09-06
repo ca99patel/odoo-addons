@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_editor_menu_multilevel" inherit_id="website.assets_editor">
+        <xpath expr="." position="inside">
+            <script type="text/javascript">
+                var menu_levels = <t t-esc="request.env['ir.config_parameter'].sudo().get_param('website_menu_multilevel.website_menu_levels')"/>;
+            </script>
+            <script type="text/javascript" src="/website_menu_multilevel/static/src/js/multilevel_menu.js"/>
+        </xpath>
+    </template>
+</odoo>
